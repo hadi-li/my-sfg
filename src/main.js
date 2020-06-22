@@ -8,6 +8,8 @@ import '@/styles/reset.css';
 import './utils/directives.js'; //引入dialog可拖拽 可拉伸
 import myTable from '@/components/mytable.vue';
 
+
+
 Vue.component('myTable', myTable)
 Vue.use(ElementUI);
 Vue.config.productionTip = false
