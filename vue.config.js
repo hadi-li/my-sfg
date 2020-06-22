@@ -4,7 +4,7 @@ module.exports = {
     // proxy: 'http://localhost:3000/'
     proxy: {
       '/api': {
-        target: 'http://localhost:3000', // 配置目标的地址
+        target: 'http://111.229.12.178:3000', // 配置目标的地址
         ws: true, // proxy websockets
         changeOrigin: true, // needed for virtual hosted sites
         pathRewrite: {
