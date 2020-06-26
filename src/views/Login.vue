@@ -2,7 +2,13 @@
   <div class="loginBg">
     <div class="login_weap">
       <div class="login_border">
-        <h4 class="login_title">登录</h4>
+        <div class="titleArea rflex">
+          <img class="logo" src="../assets/header.jpg" alt="可爱雪" />
+          <span class="title">
+            可爱雪
+            <i>sfg</i>
+          </span>
+        </div>
         <el-form :model="form" :rules="rules" ref="loginForm">
           <el-form-item prop="username">
             <el-input size="small" v-model="form.username" placeholder="请输入账号">
@@ -16,19 +22,24 @@
             </el-input>
           </el-form-item>
           <el-row>
-            <el-col :span="20">
+            <el-col :span="19">
               <el-form-item prop="code">
-                <el-input size="small" v-model="form.code" placeholder="验证码"></el-input>
+                <el-input size="small" v-model="form.code" placeholder="验证码" @keyup.enter.native="loginIn"></el-input>
               </el-form-item>
             </el-col>
-            <el-col :span="4">
+            <el-col :span="5">
               <img :src="authImgUrl" alt @click="changeAuthImg" />
             </el-col>
           </el-row>
           <el-form-item>
-            <el-button size="small" type="primary" class="login_submit" @click="loginIn">登 录</el-button>
+            <el-button size="small" type="primary" class="submit_btn" @click="loginIn">登 录</el-button>
           </el-form-item>
-          <el-button size="small" type="primary" class="login_submit" @click="register">注册</el-button>
+          <!-- <p>
+            <span>忘记密码</span>
+            <span>|</span>
+            <span>立即注册</span>
+          </p> -->
+          <!-- <el-button size="small" type="primary" class="login_submit" @click="register">注册</el-button> -->
         </el-form>
       </div>
     </div>
@@ -80,11 +91,11 @@ export default {
         }
       });
     },
-    register() {
-      userRegister(this.form).then(res => {
-        console.log(res);
-      });
-    },
+    // register() {
+    //   userRegister(this.form).then(res => {
+    //     console.log(res);
+    //   });
+    // },
     changeAuthImg() {
       this.authImgUrl = "/api/getCode" + "?" + new Date().getTime();
     }
@@ -94,4 +105,42 @@ export default {
 
 <style lang="less">
 @import "../styles/login.css";
+.login_weap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 430px;
+  border-radius: 5px;
+  padding: 25px;
+  text-align: center;
+  .titleArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    width: 100%;
+    padding-bottom: 20px;
+    .logo {
+      width: 40px;
+      margin-right: 10px;
+      border-radius: 20px;
+      height: 40px;
+    }
+    .title {
+      i {
+        color: #ff6c60;
+      }
+    }
+  }}
+ 
+    .submit_btn {
+      width: 100%;
+      padding: 13px 0;
+      font-size: 16px;
+    }
+  
+
 </style>

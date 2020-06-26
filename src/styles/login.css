@@ -1,61 +1,12 @@
 /* // $global-color:#0cb3f0; */
+
 .loginBg {
-  display: flex;
-  align-items: center;
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 700px;
-  margin: 0 auto;
-  /* background: url(../assets/2.jpg) 0 bottom repeat-x ; */
-  animation: animate-cloud 20s linear infinite;
-}
-@-webkit-keyframes animate-cloud {
-  from {
-    background-position: 600px 100%;
-  }
-  to {
-    background-position: 0 100%;
-  }
+  height: 100%;
+  background: url(../assets/bgz.jpg) no-repeat center center;
+  background-size: 100% 100%;
 }
 
 
-.login_weap {
-  margin: auto;
-  width: 600px;
-  box-shadow: -4px 5px 10px rgba(0, 0, 0, 0.4);
-}
-
-.login_border {
-  border-left: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: #fff;
-  background-color: #fff;
-  box-sizing: border-box;
-  min-height: 400px;
-}
-
-.login_title {
-  color: #333;
-  /* margin-bottom: 40px; */
-  font-weight: 500;
-  font-size: 22px;
-  text-align: center;
-  letter-spacing: 4px;
-}
-
-.login_submit {
-  width: 100%;
-  height: 45px;
-  border: 1px solid #409EFF;
-  background: none;
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 300;
-  color: #409EFF;
-  cursor: pointer;
-  margin-top: 30px;
-  font-family: "neo";
-  transition: 0.25s;
-}
 

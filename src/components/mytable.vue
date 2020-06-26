@@ -286,7 +286,7 @@ export default {
 }
 
 #my_form_container .el-row {
-  padding: 0px 10px 10px;
+  padding: 0px 10px 22px;
 }
 
 #my_form_container .page {
